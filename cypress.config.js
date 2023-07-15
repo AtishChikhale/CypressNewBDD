@@ -7,6 +7,8 @@ const createEsbuildPlugin =
 
 module.exports = defineConfig({
   e2e: {
+    chromeWebSecurity: false,
+    // pageLoadTimeout: 6000,
     async setupNodeEvents(on, config) {
       const bundler = createBundler({
         plugins: [createEsbuildPlugin(config)],
